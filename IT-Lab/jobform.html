@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Job Application</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+    <body>
+        <form>
+            <h1 align="center">Job Application</h1>
+            <h2 style="color:#920505">Personal Information</h2>
+            
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" id="fname" name="first"></td>
+                    <td><input type="text" id="lname" name="last"></td>
+                </tr>
+                <tr style="font-size:10px">
+                    <td></td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td colspan="2"><input type="email" size="45" id="email" name="email" placeholder="user@example.com"></td>
+                </tr>
+                <tr>
+                    <td>Education</td>
+                    <td colspan="2">
+                        <select id="education" name="education" style="width:350px;">
+                            <option selected>Please Choose</option>
+                            <option value="10">10<sup>th</sup></option>
+                            <option value="12">+2</option>
+                            <option value="btech">B.Tech</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Resume</td>
+                    <td colspan="2"><input style="width: 300px" type="file" id="resume" name="resume"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td colspan="2">
+                        <input type="text" id="address1" name="address1" size="50"><br>
+                        <center style="font-size:10px">Address 1</center>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <input type="text" id="address2" name="address2" size="50"><br>
+                        <center style="font-size:10px">Address 2</center>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2">
+                        <select id="country" name="country" style="width:500px;">
+                            <option selected>Select a Country</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" id="city" name="city"></td>
+                    <td>
+                        <input type="text" id="state" name="state" size="6">
+                        <input type="number" id="zipcode" name="zipcode" size="5">
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td></td>
+                    <td style="font-size:10px">City</td>
+                    <td style="font-size:10px">State &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Zip Code</td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td colspan="2"><input type="number" id="code" name="code" size='5'>
+                        <input type="number" id="number" name="number" size="30">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>What are your hobbies?</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" id="hobby" name="hobby" size="75"></td>
+                </tr>
+            </table>
+            
+            <h2 style="color:#920505">Previous/Current Employment Details</h2>
+            <table>
+                <tr>
+                    <td>Company Name</td>
+                    <td><input type="text" name="compname" size="50"></td>
+                </tr>
+                <tr>
+                    <td>Job Title</td>
+                    <td><input type="text" name="job" size="50"></td>
+                </tr>
+                <tr>
+                    <td>How long were you<br>here?</td>
+                    <td><input type="text" name="dur" size="48"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
