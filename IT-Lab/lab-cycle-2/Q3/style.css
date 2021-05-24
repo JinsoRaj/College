@@ -1,0 +1,113 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+/* header already here*/
+header{
+    padding: 20px 20px;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    font-family: 'Syne Mono', monospace;
+    background-color: #6d6a6a;
+}
+header nav{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img{
+    width: 100px;
+}
+
+.navbar .menu{
+    display: flex;
+}
+.navbar a{
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    padding:10px 8px;
+    margin: 0px 20px;
+}
+.content {
+    text-align: justify;
+}
+.hero{
+    position: relative;
+    font-family: 'satisfy',cursive;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(11, 11, 10);
+}
+.hero img{
+    width: 100%;
+    height: 700px;
+}
+.hero .hero-info h1{
+    color: rgb(37, 21, 21);
+    font-size: 50px;
+    line-height:94px;
+    font-weight: 900;
+    display: flex;
+}
+
+.hero .hero-info{
+    position: absolute;
+    top: 5%;
+    margin-left: 450px;
+}
+
+section .para1{
+    float: left;
+    width: 50%;
+    padding: 20px;
+    background-color: #a19f9f;
+}
+section .para2{
+    float: left;
+    width: 50%;
+    padding: 20px;
+    background-color: #6d6a6a;
+}
+
+.page {
+    padding: 0px 40px;
+    text-align: justify;
+    /* width: 1000px; */
+    background-color: #000000aa;
+}
+label {
+    float: left;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.col {
+    float: left;
+    width: 25%;
+    margin-top: 10px;
+}
+.cols {
+    float: left;
+    width: 75%;
+    margin-top: 10px;
+}
+.buttons {
+    /* float: right; */
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
