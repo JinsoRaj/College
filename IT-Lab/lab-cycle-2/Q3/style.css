@@ -44,6 +44,18 @@ header .logo img{
     padding:10px 8px;
     margin: 0px 20px;
 }
+.card {
+    background-color: #dddddda1;
+    padding: 20px;
+    margin-left: 250px;
+    width: 800px;
+}
+.cardr {
+    background-color: #dddddda1;
+    padding: 20px;
+    margin-left: 250px;
+    width: 800px;
+}
 .content {
     text-align: justify;
 }
