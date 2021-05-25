@@ -1,12 +1,3 @@
-:root {
-    /* Navbar Colors */
-    --navbar-bg: #7773ff;
-    --navbar-text: #f2f2f2;
-    --navbar-hover: #c8f2ff;
-    --navbar-hover-text: #646464;
-    --navbar-active: #b001ff;
-    --navbar-logout-hover: #ff4040;
-}
 
 * {
     box-sizing: border-box;
@@ -26,32 +17,35 @@ body {
 .header {
     padding: 30px;
     text-align: center;
-    background: #d1e7ff;
+    background: #41d17d;
 }
 
 .header h1 {
     font-size: 50px;
 }
 
+.active {
+    background-color: black;
+}
+
 /* Navbar */
 
 .navbar {
     overflow: hidden;
-    background-color: var(--navbar-bg);
+    background-color: maroon;
 }
 
 .navbar a {
     float: left;
     display: block;
-    color: var(--navbar-text);
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-.navbar a:hover:not(.active):not(.logout-btn) {
-    background-color: var(--navbar-hover);
-    color: var(--navbar-hover-text);
+.navbar a:hover {
+    background-color: rgb(7, 34, 12);
 }
 
 
@@ -79,7 +73,7 @@ input[type=submit], input[type=reset] {
 }
 
 input[type=submit] {
-    background-color: #bd2bff;
+    background-color: #434344;
     color: white;
 }
 
@@ -93,14 +87,10 @@ input[type=reset]:hover {
 }
 
 input[type=submit]:hover {
-    background-color: #b001ff;
+    background-color: #0e0313;
 }
 
-.col-10 {
-    width: 10%;
-    float: left;
-    margin-top: 6px;
-}
+
 
 .col-15 {
     width: 15%;
@@ -108,19 +98,19 @@ input[type=submit]:hover {
     margin-top: 6px;
 }
 
-.col-25 {
+.col-1st {
     float: left;
     width: 25%;
     margin-top: 6px;
 }
 
-.col-75 {
+.col-2nd {
     float: left;
     width: 75%;
     margin-top: 6px;
 }
 
-.col-btn {
+.btn {
     float: right;
     margin-top: 6px;
 }
@@ -138,8 +128,20 @@ input[type=submit]:hover {
 }
 
 .card {
-    background-color: #b3c1cf;
+    background-color: rgb(146, 156, 146);
     padding: 20px;
     margin-top: 20px;
 }
 
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(146, 156, 146);
+}
+
+li{
+    border: 3px solid white;
+    font-size: 25px;
+}

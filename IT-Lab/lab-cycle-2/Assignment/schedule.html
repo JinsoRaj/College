@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hospital</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="header" style="background-image: url('../images/schedule.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+        <h1>Taluk Headquarters Hospital, Kottarakkara</h1>
+        <h2>Hospital Appointment</h2>
+    </div>
+    <div class="navbar">
+        <a href="index.html">List of Doctors</a>
+        <a href="./schedule.html" class="active">Schedule Appointment</a>
+    </div>
+
+    <div class="content">
+        <div class="card">
+            <form action="#">
+                <div class="row">
+                    <div class="col-1st">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col-2nd">
+                        <input type="text" id="name" name="name" placeholder="Name of patient">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1st">
+                        <label for="age">Age</label>
+                    </div>
+                    <div class="col-2nd">
+                        <input type="number" id="age" name="age" placeholder="Age">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1st">
+                        <label for="sex">Sex</label>
+                    </div>
+                    <div class="col-2nd">
+                        <input type="text" id="sex" name="sex" placeholder="Sex">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1st">
+                        <label for="disease">Disease</label>
+                    </div>
+                    <div class="col-2nd">
+                        <textarea id="disease" name="disease" placeholder="Disease details..." style="height:150px"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1st">
+                        <label for="doctor">Doctor</label>
+                    </div>
+                    <div class="col-2nd">
+                        <select name="doctor" id="doctor">
+                            <option selected="selected"></option>
+                            <option value="Dr Anil K Tharian">Dr Anil K Tharian</option>
+                            <option value="Dr C Subbarayan">Dr C Subbarayan</option>
+                            <option value="Dr Nirmala">Dr Nirmala</option>
+                            <option value="Dr Jayakumar">Dr Jayakumar</option>
+                            <option value="Dr Anju Krishna">Dr Anju Krishna</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1st">
+                        <label for="time">Time slot</label>
+                    </div>
+                    <div class="col-2nd">
+                        <select name="time" id="time">
+                            <option selected="selected"></option>
+                            <option value="9">9:00 AM</option>
+                            <option value="10">10:00 AM</option>
+                            <option value="11">11:00 AM</option>
+                            <option value="12">12:00 PM</option>
+                            <option value="2">2:00 PM</option>
+                            <option value="3">3:00 PM</option>
+                            <option value="4">4:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1st">
+                        <label for="phone">Phone Number</label>
+                    </div>
+                    <div class="col-2nd">
+                        <input type="number" id="phone" name="phone" placeholder="Phone Number">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1st">
+                        <label for="address">Address</label>
+                    </div>
+                    <div class="col-2nd">
+                        <textarea id="address" name="address" placeholder="Address" style="height:100px"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="btn">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Clear">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
