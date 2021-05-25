@@ -1,0 +1,145 @@
+:root {
+    /* Navbar Colors */
+    --navbar-bg: #7773ff;
+    --navbar-text: #f2f2f2;
+    --navbar-hover: #c8f2ff;
+    --navbar-hover-text: #646464;
+    --navbar-active: #b001ff;
+    --navbar-logout-hover: #ff4040;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    width: 1000px;
+    background: #f1f1f1;
+}
+
+/* Header */
+
+.header {
+    padding: 30px;
+    text-align: center;
+    background: #d1e7ff;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Navbar */
+
+.navbar {
+    overflow: hidden;
+    background-color: var(--navbar-bg);
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: var(--navbar-text);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover:not(.active):not(.logout-btn) {
+    background-color: var(--navbar-hover);
+    color: var(--navbar-hover-text);
+}
+
+
+/* Form */
+
+input[type=text], input[type=password], input[type=number], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit], input[type=reset] {
+    margin-left: 5px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit] {
+    background-color: #bd2bff;
+    color: white;
+}
+
+input[type=reset] {
+    background-color: #ddd;
+    color: #333;
+}
+
+input[type=reset]:hover {
+    background-color: #ccc;
+}
+
+input[type=submit]:hover {
+    background-color: #b001ff;
+}
+
+.col-10 {
+    width: 10%;
+    float: left;
+    margin-top: 6px;
+}
+
+.col-15 {
+    width: 15%;
+    float: left;
+    margin-top: 6px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.col-btn {
+    float: right;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* content */
+
+.content {
+    width: 100%;
+}
+
+.card {
+    background-color: #b3c1cf;
+    padding: 20px;
+    margin-top: 20px;
+}
+

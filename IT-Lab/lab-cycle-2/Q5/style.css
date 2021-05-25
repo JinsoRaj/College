@@ -30,7 +30,9 @@ header nav{
 header .logo img{
     width: 100px;
 }
-
+button{
+    background-color: rgb(102, 37, 37);
+}
 .navbar .menu{
     display: flex;
     background-color: gray;
