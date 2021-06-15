@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <label for="first">First number:</label>
+    <input type='text' id='first'>&nbsp;
+    <label for="second">Second number:</label>
+    <input type='text' id='second'><br><br>&nbsp;&nbsp;&nbsp;
+    <button id="add">+</button>
+    <button id="sub">-</button>
+    <button id="mul">x</button>
+    <button id="div">%</button><br><br>&nbsp;&nbsp;&nbsp;
+    <label for="result">Result:</label>
+    <input type='text' id='result'><br>
+
+
+    <script>
+
+        const FirstValue = document.getElementById("first")
+        const SecondValue = document.getElementById("second")
+        const ResultValue = document.getElementById("result")
+
+        const addButton = document.getElementById("add")
+        const subButton = document.getElementById("sub")
+        const mulButton = document.getElementById("mul")
+        const divButton = document.getElementById("div")
+
+        function add() {
+            ResultValue.value = parseInt(FirstValue.value) + parseInt(SecondValue.value)
+        }
+        function sub() {
+            ResultValue.value = parseInt(FirstValue.value) - parseInt(SecondValue.value)
+        }
+        function mul() {
+            ResultValue.value = parseInt(FirstValue.value) * parseInt(SecondValue.value)
+        }
+        function div() {
+            ResultValue.value = parseInt(FirstValue.value) / parseInt(SecondValue.value)
+        }
+
+        addButton.onclick = add
+        subButton.onclick = sub
+        mulButton.onclick = mul
+        divButton.onclick = div
+
+    </script>
+</body>
+</html>

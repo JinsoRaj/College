@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Armstrong</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <label for="number">Enter number:</label>
+    <input type='text' id='number'>&nbsp;&nbsp;
+
+    <button id="submit">SUBMIT</button><br>
+    <p id="result"> </p>
+
+
+    <script>
+
+        const Number = document.getElementById("number")
+        const submitButton = document.getElementById("submit")
+        const Result = document.getElementById("result")
+
+
+        function checkArmstrong() {
+            let digit = parseInt(Number.value)
+            let temp = digit
+            let sum = 0
+
+            if(Number.value.length != 4){
+                alert("Number must be 4 digit.")
+            }
+            else{
+                while(temp != 0){
+                    sum += (temp % 10) ** 4
+                    temp = Math.floor(temp / 10)
+
+                }
+                if(digit == sum){
+                    Result.innerText = "Armstrong number."
+                }
+                else{
+                    Result.innerText = "Not Armstrong number."
+                }
+            }
+        }
+        
+        submitButton.onclick = checkArmstrong
+
+    </script>
+</body>
+</html>
