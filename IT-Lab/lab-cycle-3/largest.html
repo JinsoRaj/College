@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Largest numbers</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <label for="numbers">Enter 10 numbers seperated by space:</label>
+    <input type='text' id='numbers'>&nbsp;&nbsp;
+    <button id="submit">SUBMIT</button><br>
+    <p id="result"> </p>
+
+
+    <script>
+
+        const Numbers = document.getElementById("numbers")
+        const submitButton = document.getElementById("submit")
+        const Result = document.getElementById("result")
+
+
+        function getLargest() {
+            let digits = Numbers.value //Full numbers as string
+            let digitArray = digits.split(" ").map(Number); //store into array as number.
+            var Largest = Math.max.apply(null, digitArray); // get the largest of the array
+            digitArray.splice(digitArray.indexOf(Largest), 1) //removes largest one.
+            var secLargest = Math.max.apply(null, digitArray); // get 2nd largest of the array
+
+            Result.innerText = `Two largest values are: ${Largest} and ${secLargest}`
+            
+        }
+        
+        submitButton.onclick = getLargest
+
+    </script>
+</body>
+</html>
