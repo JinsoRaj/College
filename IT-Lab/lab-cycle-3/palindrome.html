@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Palindrome</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <label for="number">Enter number:</label>
+    <input type='text' id='number'>&nbsp;&nbsp;
+
+    <button id="submit">SUBMIT</button><br>
+    <p id="result"> </p>
+
+
+    <script>
+
+        const Number = document.getElementById("number")
+        const submitButton = document.getElementById("submit")
+        const Result = document.getElementById("result")
+
+
+        function checkPalindrome() {
+            let digit = Number.value //as string
+            let reverse = ""  //empty string
+
+            if(Number.value.length != 5){
+                alert("Not a 5 digit number.")
+                Number.value = ""
+            }
+            else{
+                
+                for(i=4; i>=0; i--){
+                    reverse += digit[i] //string concatenation
+                }
+
+                if(digit == reverse){
+                    Result.innerText = "Palindrome number."
+                }
+                else{
+                    Result.innerText = "Not Palindrome number."
+                }
+            }
+        }
+        
+        submitButton.onclick = checkPalindrome
+
+    </script>
+</body>
+</html>
