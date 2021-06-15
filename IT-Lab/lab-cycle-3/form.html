@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Registration form</title>
+    <style>
+        h1 {
+        margin-left: 70px;
+        }
+        form li {
+        list-style: none;
+        margin-bottom: 5px;
+        }
+
+        form ul li label{
+        float: left;
+        clear: left;
+        width: 100px;
+        text-align: right;
+        margin-right: 10px;
+        font-size:14px;
+        }
+
+        form ul li input, select, span {
+        float: left;
+        margin-bottom: 10px;
+        }
+
+        form textarea {
+        float: left;
+        width: 350px;
+        height: 150px;
+        }
+
+        [type="submit"] {
+        clear: left;
+        margin: 20px 0 0 230px;
+        font-size:18px
+        }
+
+        p {
+        margin-left: 70px;
+        font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+    <form name='registration' onSubmit="return formValidate();">
+        <ul>
+            <li><label for="username">Name:</label></li>
+            <li><input type="text" name="username" size="50" /></li>
+            <li><label id="gender">Sex:</label></li>
+            <li><input type="radio" name="msex" value="Male" /><span>Male</span></li>
+            <li><input type="radio" name="fsex" value="Female" /><span>Female</span></li>
+            <li><label for="regid">Reg id:</label></li>
+            <li><input type="text" name="regid" size="12" /></li>
+            <li><label>Scheme:</label></li>
+            <li><input type="checkbox" name="bt" value="bt" checked /><span>B.Tech</span></li>
+            <li><input type="checkbox" name="mt" value="mt" /><span>M.Tech</span></li>
+            <li><label for="dep">Department:</label></li>
+            <li>
+                <select name="dep">
+                    <option selected="" value="Default">(Please select Department)</option>
+                    <option value="IT">IT</option>
+                    <option value="CV">CIVIL</option>
+                    <option value="MC">MECH</option>
+                    <option value="EC">EC</option>
+                    <option value="EE">EEE</option>
+                </select></li>
+            <li><label for="sem">Semester:</label></li>
+            <li>
+                <select name="sem">
+                    <option selected="" value="Default">(Please select yout Semester)</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="S3">S3</option>
+                    <option value="S4">S4</option>
+                    <option value="S5">S5</option>
+                    <option value="S6">S6</option>
+                    <option value="S7">S7</option>
+                    <option value="S8">S8</option>
+                </select></li>
+            <li><label for="email">Email:</label></li>
+            <li><input type="text" name="email" size="50" /></li>
+            <li><label for="address">Address:</label></li>
+            <li><input type="text" name="address" size="50" /></li>
+
+            <li><input type="submit" name="submit" value="Submit" /></li>
+        </ul>
+    </form>
+
+    <script>
+        function formValidate(){
+            var name = document.registration.username.value; 
+            var registerId = document.registration.regid.value;
+            var email = document.registration.email.value;
+            const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+            if(name==null || name==""){
+                alert("Name can't be blank");  
+                return false; 
+            }
+            if(registerId==null || !registerId.startsWith("TRV")){
+                alert("Register id can't be blank & it must start with TRV");  
+                return false; 
+            }
+            if(!regex.test(String(email).toLowerCase())){
+                alert("no");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
