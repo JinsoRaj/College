@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Encrypt</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+    <body>
+		<input type="button" value="Encrypt data" onclick="Encrypt()">
+
+		<input type="button" value="Decrypt data" onclick="Decrypt()"><br><br>
+        <span id="result"> </span>
+
+
+        <script type="text/javascript">
+	
+            var Result = document.getElementById("result")
+        
+            function Encrypt()
+            {
+                var input = prompt("Please enter a 4 digit number:");
+        
+                var number = parseInt(input);
+        
+                var digit1 = parseInt((number / 1000 + 7) % 10);
+                var digit2 = parseInt((((number % 1000) / 100) + 7) % 10);
+                var digit3 = parseInt(((((number % 1000) % 100) / 10) + 7) % 10);
+                var digit4 = parseInt(((((number % 1000) % 100) % 10) + 7) % 10);
+        
+                var encryptedNum = "The encrypted number is " + digit3 + digit2 + digit1 + digit4;
+        
+                Result.innerText = encryptedNum
+        
+            }
+        
+            function Decrypt()
+            {
+
+                var input = prompt("Please enter a 4 digit number:");
+        
+                var number = parseInt(input)
+        
+                var digit1 = parseInt(number / 1000);
+                var digit2 = parseInt(number % 1000 / 100);
+                var digit3 = parseInt(number % 1000 % 100 / 10);
+                var digit4 = parseInt(number % 1000 % 100 % 10);
+                
+                console.log(digit1, digit2, digit3, digit4)
+
+                alert("How to reverse % 10 ? 🙄😳")
+            }
+        
+            </script>
+	</body>
+</html>
