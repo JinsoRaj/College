@@ -39,16 +39,27 @@
 
                 var input = prompt("Please enter a 4 digit number:");
         
-                var number = parseInt(input)
+                var number = input // number as string
         
                 var digit1 = parseInt(number / 1000);
                 var digit2 = parseInt(number % 1000 / 100);
                 var digit3 = parseInt(number % 1000 % 100 / 10);
                 var digit4 = parseInt(number % 1000 % 100 % 10);
                 
-                console.log(digit1, digit2, digit3, digit4)
+                let orginalNumber = String(digit3) + String(digit2) + String(digit1) + String(digit4)
+                let resultNumber =[];
+                for (var i = 0; i < orginalNumber.length; i++) {
+                    if (orginalNumber[i] >= 7) {
+                        resultNumber[i] = Number(orginalNumber[i]) - 7;
+                    }
+                    else {
+                        resultNumber[i] = Number(orginalNumber[i]) + 3;
+                    }
+                }
 
-                alert("How to reverse % 10 ? 🙄😳")
+                var decryptedNum = "The decrypted number is " + resultNumber.join("");
+                Result.innerText = decryptedNum
+
             }
         
             </script>
