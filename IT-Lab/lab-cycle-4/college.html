@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Javascript</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .element1 {
+            background-color: green;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .element2 {
+            background-color: yellow;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .element3 {
+            background-color: greenyellow;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body onclick="clickHandler ()">
+    <div class="element1" id="1" onclick="clickHandler (this.id)" style="text-align:center">1st Element</div>
+    <div class="element2" id="2" onclick="clickHandler (this.id)" style="text-align:center">2nd Element</div>
+    <div class="element3" id="3" onclick="clickHandler (this.id)" style="text-align:center">3rd Element</div>
+    <script>
+        function clickHandler(n) {
+            if (n == null) {
+                if (event.shiftKey) {
+                    alert("Shift Key Pressed");
+                } else if(!event.ctrlKey){
+                    alert("Clicked");
+                }
+            }else{
+                console.log(n)
+                if(event.ctrlKey){
+                    alert("element " + n + " clicked");
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

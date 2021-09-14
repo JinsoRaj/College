@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+<students>
+    <student>
+        <name>Abin</name>
+        <gender>Male</gender>
+        <branch>CS</branch>
+        <address>Denmark </address>
+    </student>
+    <student>
+        <name>Merlin</name>
+        <gender>Female</gender>
+        <branch>EC</branch>
+        <address>kerala</address>
+    </student>
+</students>

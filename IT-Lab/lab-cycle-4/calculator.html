@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Calculator</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+
+        input {
+            width: 100%;
+            height: 80px;
+            padding: 12px;
+            font-size: 30px;
+            text-align: right;
+            border: 1px ;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            height: 60px;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background-color: #f1f1f1;
+        }
+
+        button:active {
+            background-color: #cacaca;
+        }
+
+        .op {
+            background-color: #cacaca;
+        }
+
+        .op:active {
+            background-color: #929292;
+        }
+
+        .eq {
+            background-color: #2992e7;
+        }
+
+        .eq:active {
+            background-color: #1d649e;
+        }
+
+        .container {
+            width: 600px;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 5px;
+        }
+
+        .col-100 {
+            width: 100%;
+        }
+
+        .col-25 {
+            width: 25%;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+    <script>
+        var pop = 0;
+        var pval = 0;
+        var temp = 0;
+        var decimal = false;
+        var dp = 10;
+
+        function enterNum(n) {
+            if (decimal) {
+                temp += n / dp;
+                dp *= 10;
+            } else {
+                temp *= 10;
+                temp += n;
+            }
+            document.getElementById("output").value = temp;
+        }
+
+        function opn(op) {
+            if (op == 6) {
+                decimal = true;
+                document.getElementById("output").value = temp + ".";
+                return;
+            }
+            switch (pop) {
+                case 0: pval = temp;
+                    break;
+                case 1: pval += temp;
+                    break;
+                case 2: pval -= temp;
+                    break;
+                case 3: pval *= temp;
+                    break;
+                case 4: pval /= temp;
+                    break;
+                default: break;
+            }
+            decimal = false;
+            dp = 10;
+            if (op == 5) {
+                pop = 0;
+                temp = pval;
+                pval = 0;
+                document.getElementById("output").value = temp;
+            } else {
+                temp = 0;
+                pop = op;
+                document.getElementById("output").value = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-100">
+                <input type="text" id="output" autocomplete="off" readonly>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <button onclick="enterNum(7)">7</button>
+            </div>
+            <div class="col-25">
+                <button onclick="enterNum(8)">8</button>
+            </div>
+            <div class="col-25">
+                <button onclick="enterNum(9)">9</button>
+            </div>
+            <div class="col-25">
+                <button onclick="opn(4)" class="op">&#247</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <button onclick="enterNum(4)">4</button>
+            </div>
+            <div class="col-25">
+                <button onclick="enterNum(5)">5</button>
+            </div>
+            <div class="col-25">
+                <button onclick="enterNum(6)">6</button>
+            </div>
+            <div class="col-25">
+                <button onclick="opn(3)" class="op">x</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <button onclick="enterNum(1)">1</button>
+            </div>
+            <div class="col-25">
+                <button onclick="enterNum(2)">2</button>
+            </div>
+            <div class="col-25">
+                <button onclick="enterNum(3)">3</button>
+            </div>
+            <div class="col-25">
+                <button onclick="opn(2)" class="op">-</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <button onclick="enterNum(0)">0</button>
+            </div>
+            <div class="col-25">
+                <button onclick="opn(6)">.</button>
+            </div>
+            <div class="col-25">
+                <button onclick="opn(5)" class="eq">=</button>
+            </div>
+            <div class="col-25">
+                <button onclick="opn(1)" class="op">+</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Record</title>
+    <script>
+        function validateForm() {
+            let x = document.forms["form"]["email"].value;
+            if (x == "") {
+                alert("Email cannot be empty");
+                return false;
+            }
+            if (!x.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+                alert("invalid email");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="form" method="POST" action="qn1/collect.php" onsubmit="return validateForm()">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name"><br>
+        <label for="address">Address: </label>
+        <textarea id="address" name="address"></textarea><br>
+        <label for="age">Age: </label>
+        <input type="number" id="age" name="age"><br>
+        <label for="email">Email: </label>
+        <input type="text" id="email" name="email"><br>
+        <label for="phone">Phone: </label>
+        <input type="number" id="phone" name="phone"><br>
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
+
+    <a href="qn1/display.php">Show all</a>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Traversal</title>
+</head>
+
+<body>
+	<div class="addel">
+		<button onclick="add()">add new element</button><br>
+    </div>
+
+    <div class="dele"><button onclick="del()">Delete element</button></div>
+    <div class="repl">Old content <button onclick="rep()">Click to Replace</button></div>
+
+    <div id="findel"> <button onclick="find()">Click to find</button></div>
+
+    <script>
+        const body = document.querySelector("body");
+
+        function add() {
+            const tree = body.querySelector(".addel");
+            var foo = document.createElement("p");
+            var footext = document.createTextNode("new element");
+            foo.appendChild(footext);
+            tree.appendChild(foo);
+        }
+
+        function del() {
+            const ele = document.querySelector(".dele");
+            body.removeChild(ele);
+        }
+
+        function rep(){
+            const oldele = body.querySelector(".repl");
+            var newele = document.createElement("h1");
+            var neweletxt = document.createTextNode("New replaced content!");
+            newele.appendChild(neweletxt);
+            body.replaceChild(newele, oldele);
+        }
+
+        function find(){
+            const found = document.getElementById("findel");
+            found.innerHTML = "Found!";
+        }
+    </script>
+
+</body>
+
+</html>
