@@ -1,0 +1,22 @@
+{
+  "name": "t2mdetabot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "deasync": "^0.1.21",
+    "express": "^4.17.1",
+    "extend": "^3.0.2",
+    "parse-torrent": "^9.1.3",
+    "request": "^2.88.2",
+    "telegraf": "^3.38.0",
+    "universalify": "^2.0.0",
+    "zlib": "^1.0.5"
+  }
+}

@@ -1,0 +1,1 @@
+{"id":"b816d337-08b8-4bd0-81af-6f96293980bf","space":2943,"runtime":"python3.7","name":"jioflask","path":"bfli32","project":"a0uamwzm","account":"144798365827","region":"ap-southeast-1","deps":["flask","pyDes","pybase64"],"envs":null,"public":false,"log_level":"","cron":""}
