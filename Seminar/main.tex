@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[sorting=none]{biblatex} %Imports biblatex package
+\addbibresource{books.bib} %Import the bibliography file
+
+\begin{document}
+
+\title{Driver Activity Recognition for Intelligent Vehicles:
+A Deep Learning Approach}
+\author{Jinso Raj}
+\maketitle
+
+\begin{abstract}
+    It is important to drive safely because it can save our life. Driver decisions and behaviors are essential factors
+that can affect the driving safety. The accident rate can be reduced by 10\% to 20\% with a precise driver behavior
+    monitoring system. To understand the driver
+behaviors, a driver activities recognition system is designed based
+on the deep convolutional neural networks (CNN).
+Specifically, seven common driving activities are identified, which
+are the normal driving, right mirror checking, rear mirror
+checking, left mirror checking, using in-vehicle radio device,
+texting, and answering the mobile phone, respectively. Among
+these activities, the first four are regarded as normal driving
+tasks, while the rest three are classified into the distraction group.
+The experimental images are collected using a low-cost camera,
+and ten drivers are involved in the naturalistic data collection.
+The raw images are segmented using the Gaussian mixture model
+(GMM) to extract the driver body from the background before
+training the behavior recognition CNN model.
+To reduce the training cost, transfer learning method is applied to fine tune the pre-trained CNN models. Three different pre-trained CNN models, namely, AlexNet, GoogLeNet, and ResNet50 are adopted and evaluated. Then, the CNN models are trained for the binary classification task and identify whether the driver is being distracted or not. Finally, the data will be further analyzed, and the model will be updated to increase the system robustness and detection accuracy. Meanwhile, the system will be tested and used for driver or passenger behavior analysis on the partially automated vehicles in the real world.
+
+\end{abstract}
+
+\nocite{ieee}
+\nocite{sec}
+
+\printbibliography
+
+\end{document}
+
+
+
+
