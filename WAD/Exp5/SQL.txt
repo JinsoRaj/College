@@ -1,0 +1,5 @@
+create table books(id SERIAL PRIMARY KEY, name VARCHAR(150), author VARCHAR(50), price INT);
+INSERT INTO books VALUES ('3', 'Javascript','Abhinav', '300');
+INSERT INTO books VALUES ('2', 'Medical','Deepak', '50');
+INSERT INTO books VALUES ('1', 'Data Book','Anwar', '200');
+select * from books;
