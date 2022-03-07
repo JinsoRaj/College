@@ -3,3 +3,11 @@
 *.aux
 *.log
 *.synctex.gz
+
+node_modules/
+jspm_packages/
+.npm
+*.tgz
+.env
+.env.test
+.cache
